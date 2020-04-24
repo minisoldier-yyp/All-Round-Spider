@@ -2,6 +2,8 @@
 import requests
 from loguru import logger
 import configparser
+from multiprocessing import Pool
+
 '''
 -------------------------------------------------
    @File Name :     util_functions
@@ -34,7 +36,9 @@ def valid_proxy_useful(proxy):
             pass
     return proxy_score
 
+
 def cfg_parse(file_path):
     cf = configparser.ConfigParser()
     cf.read(file_path)
     return cf
+

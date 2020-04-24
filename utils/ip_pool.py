@@ -11,3 +11,6 @@ from utils.IpPool.Manager.ProxyManager import ProxyManager
 -------------------------------------------------
 '''
 
+def fetch_one():
+    proxy_manager = ProxyManager()
+    return proxy_manager.get_one()
